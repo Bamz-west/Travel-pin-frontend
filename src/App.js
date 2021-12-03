@@ -9,6 +9,8 @@ import { format } from 'timeago.js';
 import Register from './components/Register';
 import Login from './components/Login';
 
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 function App() {
