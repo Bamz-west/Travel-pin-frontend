@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import { Room, Star } from '@mui/icons-material';
+import mapboxgl from 'mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import "./app.css";
 import axios from 'axios';
 import { format } from 'timeago.js';
 import Register from './components/Register';
 import Login from './components/Login';
+
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 function App() {
 
