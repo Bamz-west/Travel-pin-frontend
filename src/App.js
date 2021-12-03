@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const res = await axios.get("https://travel-pin-backend.herokuapp.com/api/pins");
+        const res = await axios.get("http://localhost:8800/api/pins");
         setPins(res.data);
         console.log(res.data)
       } catch (err) {
@@ -103,7 +103,7 @@ function App() {
         transitionDuration="200"
       >
         {pins.map(p => (
-          <>
+          <div key={p._id}>
             <Marker 
             latitude={p.lat} 
             longitude={p.long} 
@@ -143,7 +143,7 @@ function App() {
                 </div>
               </Popup>
             )}
-          </>
+          </div>
         ))}
         {newPlace && currentUser && (
           <Popup
