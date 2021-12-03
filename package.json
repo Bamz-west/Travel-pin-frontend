@@ -18,15 +18,15 @@
     "react-scripts": "4.0.3",
     "serve": "^13.0.2",
     "timeago.js": "^4.0.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "worker-loader": "^3.0.8"
   },
   "scripts": {
     "dev": "react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
